@@ -1,6 +1,6 @@
 package robertapikyan.com.events.implementation
 
-import android.arch.lifecycle.LifecycleOwner
+import androidx.lifecycle.LifecycleOwner
 import robertapikyan.com.events.executors.Threads
 import robertapikyan.com.events.implementation.lifecycle.LifecycleDisposable
 import robertapikyan.com.events.implementation.lifecycle.LifecycleObserver

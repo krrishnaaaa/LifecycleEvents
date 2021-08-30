@@ -1,17 +1,17 @@
 package robertapikyan.com.events.implementation.lifecycle
 
-import android.arch.lifecycle.Lifecycle
-import android.arch.lifecycle.LifecycleObserver
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.OnLifecycleEvent
 import robertapikyan.com.events.implementation.AbstractEventObserver
 import robertapikyan.com.events.implementation.Disposable
 import java.util.concurrent.locks.ReentrantLock
 
 internal class LifecycleObserver<T : Any>(
-        lifecycleOwner: LifecycleOwner,
-        private val observer: AbstractEventObserver<T>,
-        private val disposable: LifecycleDisposable<T>
+    lifecycleOwner: LifecycleOwner,
+    private val observer: AbstractEventObserver<T>,
+    private val disposable: LifecycleDisposable<T>
 ) : LifecycleObserver, Disposable, AbstractEventObserver<T>(observer) {
 
     private val lock by lazy { ReentrantLock() }
