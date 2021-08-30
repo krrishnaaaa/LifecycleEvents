@@ -3,7 +3,7 @@
 
 package robertapikyan.com.events
 
-import android.arch.lifecycle.LifecycleOwner
+import androidx.lifecycle.LifecycleOwner
 import org.jetbrains.annotations.NotNull
 import robertapikyan.com.events.executors.Threads
 import robertapikyan.com.events.implementation.AbstractEventObserver
